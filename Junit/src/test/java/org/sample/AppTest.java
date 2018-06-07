@@ -18,7 +18,7 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://jobs2.deloitte.com/global/en");
         driver.quit();
-		JUnitReport.LogResults(true, "jobs2 validated successfuly - test3");        
+		JUnitReport.LogResults(false, "jobs2 validated successfuly - test3");        
 	}
 	
 	
@@ -42,7 +42,7 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://jobs2.deloitte.com/global/en");
         driver.quit();
-        JUnitReport.LogResults(true, "jobs2 validated successfuly - test2");
+        JUnitReport.LogResults(false, "jobs2 validated successfuly - test2");
 //        try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}      
         
         
