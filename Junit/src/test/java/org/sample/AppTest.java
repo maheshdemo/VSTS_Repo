@@ -14,11 +14,15 @@ public class AppTest
 	public void test3()
 	{
 		JUnitReport.TestCaseName("TC_03 Verifying jobs2 site");
+		try{
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://jobs2.deloitte.com/global/en");
         driver.quit();
-		JUnitReport.LogResults(true, "Successfully verified jobs2 site");        
+		}catch(Exception e)
+		{
+		JUnitReport.LogResults(true, "Successfully verified jobs2 site"); 
+		}
 	}
 	
 	
@@ -27,22 +31,32 @@ public class AppTest
 	{
 		
 		JUnitReport.TestCaseName("TC_01 Verifying IReport site");
+		try{
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://IReport.com/");
         driver.quit();
-        JUnitReport.LogResults(false, "Failed to verify IReport site");
+		}catch(Exception e)
+		{
+			JUnitReport.LogResults(false, "Failed to verify IReport site");
+		}
+           
 
 	}
 	@Test
 	public void test2()
 	{
+		
 		JUnitReport.TestCaseName("TC_02 Verifying LMS site");
+		try{
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://jobs2.LMS.com/");
         driver.quit();
+		}catch(Exception e)
+		{
         JUnitReport.LogResults(false, "Failed to verify LMS site");
+		}
 //        try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}      
         
         
