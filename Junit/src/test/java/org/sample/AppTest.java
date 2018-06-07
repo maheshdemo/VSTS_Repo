@@ -13,12 +13,12 @@ public class AppTest
 	@Test
 	public void test3()
 	{
-		JUnitReport.TestCaseName("TC_03 Test3 Validating jobs2 validated successfully");
+		JUnitReport.TestCaseName("TC_03 Verifying jobs2 site");
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://jobs2.deloitte.com/global/en");
         driver.quit();
-		JUnitReport.LogResults(false, "jobs2 validated successfuly - test3");        
+		JUnitReport.LogResults(true, "Successfully verified jobs2 site");        
 	}
 	
 	
@@ -26,23 +26,23 @@ public class AppTest
 	public void test1()
 	{
 		
-		JUnitReport.TestCaseName("TC_01 Test1 Validating jobs2 validated successfully");
+		JUnitReport.TestCaseName("TC_01 Verifying IReport site");
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
-        driver.get("https://jobs2.deloitte.com/global/en");
+        driver.get("https://IReport.com/");
         driver.quit();
-        JUnitReport.LogResults(true, "jobs2 validated successfuly - test1");
+        JUnitReport.LogResults(false, "Failed to verify IReport site");
 
 	}
 	@Test
 	public void test2()
 	{
-		JUnitReport.TestCaseName("TC_02 Test2 Validating jobs2 validated successfully");
+		JUnitReport.TestCaseName("TC_02 Verifying LMS site");
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
-        driver.get("https://jobs2.deloitte.com/global/en");
+        driver.get("https://jobs2.LMS.com/");
         driver.quit();
-        JUnitReport.LogResults(false, "jobs2 validated successfuly - test2");
+        JUnitReport.LogResults(false, "Failed to verify LMS site");
 //        try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}      
         
         
