@@ -79,7 +79,7 @@ public class JUnitReport {
 	private static void createCase(boolean bStatus, String msg)
 	{
 			Element tc = doc.createElement("testcase");
-		        tc.setAttribute("name","test");
+		        tc.setAttribute("name",tcName);//test
 		        tc.setAttribute("time",(time+"")); // Seconds  (time+"").substring(0,(time+"").indexOf(".")+3)
 		        tc.setAttribute("classname",tcName);			
 				suite.appendChild(tc);	
@@ -89,7 +89,7 @@ public class JUnitReport {
 	 			failure.setAttribute("type","java.lang.AssertionError");
 	 			failure.setAttribute("message",msg);		
 	 			tc.appendChild(failure);
-	 			Text txt = doc.createTextNode("<![CDATA[java.lang.AssertionError: "+msg+" org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]>");
+	 			Text txt = doc.createTextNode("<![CDATA[java.lang.AssertionError: "+msg+" "+tcName+" ... Removed 28 stack frames]]>");
 	 			failure.appendChild(txt);
 	 			suite.setAttribute("failures",(Integer.valueOf(suite.getAttribute("failures"))+1)+"");
 	         }
