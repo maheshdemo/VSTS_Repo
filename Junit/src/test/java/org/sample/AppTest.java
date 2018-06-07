@@ -50,6 +50,7 @@ public class AppTest
         driver.quit();
 		}catch(Exception e){}
 		JUnitReport.LogResults(false, "Failed to verify LMS site");
+		System.out.println("site");
 //        try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}      
         
         
