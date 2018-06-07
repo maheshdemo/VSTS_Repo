@@ -19,10 +19,8 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://jobs2.deloitte.com/global/en");
         driver.quit();
-		}catch(Exception e)
-		{
+		}catch(Exception e){}
 		JUnitReport.LogResults(true, "Successfully verified jobs2 site"); 
-		}
 	}
 	
 	
@@ -36,11 +34,8 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://IReport.com/");
         driver.quit();
-		}catch(Exception e)
-		{
-			JUnitReport.LogResults(false, "Failed to verify IReport site");
-		}
-           
+		}catch(Exception e){}
+		JUnitReport.LogResults(false, "Failed to verify IReport site");
 
 	}
 	@Test
@@ -53,10 +48,8 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://jobs2.LMS.com/");
         driver.quit();
-		}catch(Exception e)
-		{
-        JUnitReport.LogResults(false, "Failed to verify LMS site");
-		}
+		}catch(Exception e){}
+		JUnitReport.LogResults(false, "Failed to verify LMS site");
 //        try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}      
         
         
