@@ -13,7 +13,7 @@ public class AppTest
 	@Test
 	public void test3()
 	{
-		JUnitReport.TestCaseName("TC_03 Verifying jobs2 site");
+		JUnitReport.TestCaseName("TC_03 Verifying jobs2 site - - VSTS Demo");
 		try{
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
@@ -28,7 +28,7 @@ public class AppTest
 	public void test1()
 	{
 		
-		JUnitReport.TestCaseName("TC_01 Verifying IReport site");
+		JUnitReport.TestCaseName("TC_01 Verifying IReport site - - VSTS Demo");
 		try{
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
@@ -49,7 +49,7 @@ public class AppTest
         driver.get("https://jobs2.LMS.com/");
         driver.quit();
 		}catch(Exception e){}
-		JUnitReport.LogResults(false, "Failed to verify LMS site");
+		JUnitReport.LogResults(false, "Failed to verify LMS site - - VSTS Demo");
 		System.out.println("site");
 //        try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}      
         
